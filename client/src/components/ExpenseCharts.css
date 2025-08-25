@@ -1,0 +1,10 @@
+.expense-charts-title { margin-top:0; }
+.chart-section { background:#0a0f1d; border:1px solid #1f2937; border-radius:12px; padding:12px; margin-bottom:12px; }
+.chart-container { height:300px; }
+.chart-tooltip { background:#0b1220; border:1px solid #1f2937; padding:8px 10px; border-radius:8px; color:#e5e7eb; }
+.chart-legend { background:#0a0f1d; border:1px solid #1f2937; border-radius:12px; padding:12px; }
+.legend-items { display:grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap:8px; }
+.legend-item { display:flex; align-items:center; gap:8px; }
+.legend-color { width:14px; height:14px; border-radius:3px; border:1px solid #1f2937; }
+
+

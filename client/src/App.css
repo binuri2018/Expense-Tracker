@@ -1,0 +1,5 @@
+.App { min-height: 100vh; }
+.loading { padding: 24px; color: #94a3b8; }
+.error-message { background:#7f1d1d; color:#fecaca; padding:12px 14px; border-radius:8px; margin-bottom:16px; }
+
+

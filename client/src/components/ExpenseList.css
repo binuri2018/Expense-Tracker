@@ -1,0 +1,14 @@
+.expense-list-title { margin-top:0; }
+.expense-list-empty { color:#94a3b8; padding:12px; background:#0a0f1d; border:1px dashed #334155; border-radius:10px; }
+.expense-list-table { width:100%; border-collapse:collapse; }
+.expense-list-table th, .expense-list-table td { text-align:left; padding:10px; border-bottom:1px solid #1f2937; }
+.category-badge { padding:4px 8px; border-radius:999px; background:#111827; border:1px solid #1f2937; }
+.action-button { background:#1f2937; color:#e5e7eb; border:none; padding:6px 8px; border-radius:6px; cursor:pointer; margin-right:6px; }
+.edit-button { background:#334155; }
+.delete-button { background:#7f1d1d; }
+.modal-overlay { position:fixed; inset:0; background:rgba(2,6,23,0.7); display:flex; align-items:center; justify-content:center; }
+.delete-modal { background:#0b1220; border:1px solid #1f2937; border-radius:12px; padding:16px; width:95%; max-width:420px; }
+.cancel-button { background:#334155; color:#e5e7eb; border:none; padding:8px 10px; border-radius:8px; margin-right:8px; }
+.delete-confirm-button { background:#ef4444; color:#fff; border:none; padding:8px 10px; border-radius:8px; }
+
+

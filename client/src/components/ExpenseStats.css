@@ -1,0 +1,15 @@
+.expense-stats-title { margin-top:0; }
+.stats-summary { display:grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap:10px; margin-bottom:12px; }
+.stat-card { background:#0a0f1d; border:1px solid #1f2937; border-radius:12px; padding:12px; display:flex; gap:10px; align-items:center; min-width:0; }
+.stat-icon { font-size:22px; flex-shrink:0; }
+.stat-content { min-width:0; flex:1; }
+.stat-value { font-size:18px; font-weight:700; word-break:break-word; }
+.stat-label { color:#94a3b8; font-size:12px; word-break:break-word; }
+.stats-section { margin-top:14px; }
+.category-stats { display:flex; flex-direction:column; gap:10px; }
+.category-stat-item { background:#0a0f1d; border:1px solid #1f2937; border-radius:12px; padding:10px; }
+.category-stat-header { display:flex; align-items:center; justify-content:space-between; margin-bottom:8px; }
+.category-stat-bar { height:8px; background:#0b1220; border-radius:999px; overflow:hidden; border:1px solid #1f2937; }
+.category-stat-fill { height:8px; }
+.recent-expense-item { display:flex; align-items:center; justify-content:space-between; padding:8px 0; border-bottom:1px solid #1f2937; }
+.no-recent-expenses { color:#94a3b8; }

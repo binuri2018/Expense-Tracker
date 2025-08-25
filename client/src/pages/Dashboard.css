@@ -1,0 +1,7 @@
+.dashboard-container { max-width:1100px; margin:0 auto; padding:0 16px; }
+.dashboard-header { padding:8px 0 16px; }
+.dashboard-grid { display:grid; grid-template-columns: 1fr 360px; gap:16px; }
+.dashboard-left, .dashboard-right { background:#0b1220; border:1px solid #1f2937; border-radius:12px; padding:16px; }
+@media (max-width: 960px){ .dashboard-grid { grid-template-columns: 1fr; } }
+
+

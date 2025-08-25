@@ -1,0 +1,7 @@
+.edit-modal { background:#0b1220; border:1px solid #1f2937; border-radius:12px; padding:16px; width:95%; max-width:480px; }
+.edit-modal-header { display:flex; align-items:center; justify-content:space-between; margin-bottom:8px; }
+.close-button { background:transparent; border:none; color:#e5e7eb; font-size:22px; cursor:pointer; }
+.edit-modal-error { background:#7f1d1d; color:#fecaca; padding:8px 10px; border-radius:8px; margin-bottom:10px; }
+.save-button { background:#16a34a; color:#fff; border:none; padding:8px 10px; border-radius:8px; }
+
+
