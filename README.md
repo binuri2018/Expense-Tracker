@@ -38,7 +38,7 @@ server/                   # Express backend
 ### Installation
 1. **Clone the repository**
    ```
-   git clone <repo-url>
+   git clone https://github.com/binuri2018/Expense-Tracker.git
    cd expecnce_tracker - Copy
    ```
 2. **Install dependencies**
