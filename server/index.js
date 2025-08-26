@@ -15,10 +15,14 @@ const PORT = process.env.PORT || 5000;
 // Security middleware
 app.use(helmet());
 
-// Rate limiting
+// Allow Express to respect X-Forwarded-* headers when behind proxies (e.g., Netlify, local tools)
+// This also prevents express-rate-limit from throwing when X-Forwarded-For is present
+app.set('trust proxy', 1);
+
+// Rate limiting (enable in all envs; safe with trust proxy)
 const limiter = rateLimit({
-  windowMs: 15 * 60 * 1000, // 15 minutes
-  max: 100 // limit each IP to 100 requests per windowMs
+  windowMs: 15 * 60 * 1000,
+  max: 100
 });
 app.use(limiter);
 
