@@ -14,7 +14,7 @@ const ExpenseCharts = ({ stats }) => {
     );
   }
 
-  const { categoryStats, summary } = stats;
+  const { categoryStats } = stats; // Removed summary
 
   // Prepare data for pie chart
   const pieChartData = categoryStats.map((category, index) => ({
@@ -72,7 +72,7 @@ const ExpenseCharts = ({ stats }) => {
                 cx="50%"
                 cy="50%"
                 labelLine={false}
-                label={({ name, percent }) => `${name} (${(percent * 100).toFixed(0)}%)`}
+                label={null} // Optional: remove labels from pie chart
                 outerRadius={80}
                 fill="#8884d8"
                 dataKey="value"
