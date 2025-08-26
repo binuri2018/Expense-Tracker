@@ -26,13 +26,29 @@ const limiter = rateLimit({
 });
 app.use(limiter);
 
-// CORS configuration
+// CORS configuration with allowlist
+const defaultDevOrigins = ['http://localhost:3000'];
+const allowedOrigins = (process.env.ALLOWED_ORIGINS || '').split(',')
+  .map(o => o.trim())
+  .filter(Boolean);
+
+const corsOrigins = process.env.NODE_ENV === 'production'
+  ? (allowedOrigins.length ? allowedOrigins : [process.env.CLIENT_URL].filter(Boolean))
+  : [...defaultDevOrigins, ...allowedOrigins];
+
 app.use(cors({
-  origin: process.env.NODE_ENV === 'production'
-    ? [process.env.CLIENT_URL].filter(Boolean)
-    : ['http://localhost:3000'],
-  credentials: true
+  origin: function(origin, callback) {
+    if (!origin) return callback(null, true);
+    if (corsOrigins.includes(origin)) return callback(null, true);
+    return callback(new Error('Not allowed by CORS'));
+  },
+  credentials: true,
+  methods: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
 }));
+
+// Explicitly handle preflight across routes
+app.options('*', cors({ origin: corsOrigins, credentials: true }));
 
 // Body parsing middleware
 app.use(express.json({ limit: '10mb' }));
