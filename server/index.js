@@ -24,8 +24,8 @@ app.use(limiter);
 
 // CORS configuration
 app.use(cors({
-  origin: process.env.NODE_ENV === 'production' 
-    ? ['https://yourdomain.com'] 
+  origin: process.env.NODE_ENV === 'production'
+    ? [process.env.CLIENT_URL].filter(Boolean)
     : ['http://localhost:3000'],
   credentials: true
 }));
